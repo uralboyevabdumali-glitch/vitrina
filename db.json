@@ -1,0 +1,152 @@
+{
+  
+  "users": [
+    {
+      "id": "1",
+      "firstName": "Abdumalik",
+      "lastName": "Karimov",
+      "login": "abdumalik",
+      "email": "abdumalik@vitrina.uz",
+      "phone": "+998901234567",
+      "password": "Admin123!",
+      "role": "Mijoz"
+    },
+    {
+      "id": "2",
+      "firstName": "Dilnoza",
+      "lastName": "Rahimova",
+      "login": "dilnoza",
+      "email": "dilnoza@example.com",
+      "phone": "+998909876543",
+      "password": "User456!",
+      "role": "Mijoz"
+    },
+    {
+      "id": "3",
+      "firstName": "Jasur",
+      "lastName": "Tursunov",
+      "login": "jasur",
+      "email": "jasur@example.com",
+      "phone": "+998977778899",
+      "password": "Test789!",
+      "role": "Mijoz"
+    },
+    {
+      "firstName": "Abdumali ",
+      "lastName": "Uralboyev",
+      "login": "Uralboyev",
+      "email": "uralboyevabdumali@gmail.com",
+      "phone": "+998945271380",
+      "password": "1234567890-=",
+      "role": "Mijoz",
+      "id": "VEkP-3xq6gk"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "iPhone 15 Pro",
+      "price": 12500000,
+      "category": "Elektronika",
+      "image": "https://picsum.photos/seed/iphone/400/300",
+      "description": "Apple smartfoni, 256GB xotira"
+    },
+    {
+      "id": "2",
+      "name": "Samsung Galaxy S24",
+      "price": 9800000,
+      "category": "Elektronika",
+      "image": "https://picsum.photos/seed/samsung/400/300",
+      "description": "Android flagship smartfon"
+    },
+    {
+      "id": "3",
+      "name": "MacBook Air M3",
+      "price": 15800000,
+      "category": "Kompyuter",
+      "image": "https://picsum.photos/seed/macbook/400/300",
+      "description": "13 dyuymli noutbuk, 512GB SSD"
+    },
+    {
+      "id": "4",
+      "name": "Sony WH-1000XM5",
+      "price": 3200000,
+      "category": "Audio",
+      "image": "https://picsum.photos/seed/sony/400/300",
+      "description": "Shovqinni bekor qiluvchi quloqchin"
+    },
+    {
+      "id": "5",
+      "name": "Nike Air Max 90",
+      "price": 890000,
+      "category": "Kiyim",
+      "image": "https://picsum.photos/seed/nike/400/300",
+      "description": "Erkaklar sport poyabzali"
+    },
+    {
+      "id": "6",
+      "name": "Adidas Ultraboost",
+      "price": 950000,
+      "category": "Kiyim",
+      "image": "https://picsum.photos/seed/adidas/400/300",
+      "description": "Yugurish poyabzali"
+    },
+    {
+      "id": "7",
+      "name": "Dyson V15",
+      "price": 4500000,
+      "category": "Uy-ro'zg'or",
+      "image": "https://picsum.photos/seed/dyson/400/300",
+      "description": "Simssiz changyutgich"
+    },
+    {
+      "id": "8",
+      "name": "Philips Air Fryer",
+      "price": 1800000,
+      "category": "Uy-ro'zg'or",
+      "image": "https://picsum.photos/seed/philips/400/300",
+      "description": "Havo friyeri, 6.2L"
+    },
+    {
+      "id": "9",
+      "name": "Canon EOS R6",
+      "price": 11200000,
+      "category": "Elektronika",
+      "image": "https://picsum.photos/seed/canon/400/300",
+      "description": "Professional kamera"
+    },
+    {
+      "id": "10",
+      "name": "Logitech MX Master 3S",
+      "price": 650000,
+      "category": "Kompyuter",
+      "image": "https://picsum.photos/seed/logitech/400/300",
+      "description": "Simsiz kompyuter sichqonchasi"
+    },
+    {
+      "id": "11",
+      "name": "Apple Watch Series 9",
+      "price": 4200000,
+      "category": "Elektronika",
+      "image": "https://picsum.photos/seed/applewatch/400/300",
+      "description": "Aqlli soat, GPS"
+    },
+    {
+      "id": "12",
+      "name": "Xiaomi Robot Vacuum",
+      "price": 2100000,
+      "category": "Uy-ro'zg'or",
+      "image": "https://picsum.photos/seed/xiaomi/400/300",
+      "description": "Robot changyutgich"
+    }
+  ],
+  "cart": [
+    {
+      "userId": "VEkP-3xq6gk",
+      "productId": "11",
+      "quantity": 1,
+      "id": "NgBspyj9boI"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
