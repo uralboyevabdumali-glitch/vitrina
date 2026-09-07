@@ -1,13 +1,8 @@
 import api from "./client";
-import seedData from "../../db.json";
 
 export async function getUsers() {
-  try {
-    const { data } = await api.get("/users");
-    return data;
-  } catch {
-    return seedData.users;
-  }
+  const { data } = await api.get("/users");
+  return data;
 }
 
 export async function checkDuplicate({ email }) {
@@ -34,7 +29,7 @@ export async function loginUser({ login, password }) {
   const user = users.find(
     (u) =>
       (u.login?.toLowerCase() === login.toLowerCase() ||
-        u.email?.toLowerCase() === login.toLowerCase()) &&
+        u.email.toLowerCase() === login.toLowerCase()) &&
       u.password === password
   );
   if (!user) throw new Error("INVALID_CREDENTIALS");
