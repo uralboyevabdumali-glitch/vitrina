@@ -4,7 +4,7 @@ import seedData from "../../db.json";
 export async function getUsers() {
   try {
     const { data } = await api.get("/users");
-    return data;
+    return Array.isArray(data) ? data : seedData.users;
   } catch {
     return seedData.users;
   }
