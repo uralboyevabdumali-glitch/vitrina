@@ -5,20 +5,16 @@ export async function getUsers() {
   return data;
 }
 
-export async function checkDuplicate({ login, email }) {
+export async function checkDuplicate({ email }) {
   const users = await getUsers();
-  const loginExists = users.some(
-    (u) => u.login.toLowerCase() === login.toLowerCase()
-  );
   const emailExists = users.some(
-    (u) => u.email.toLowerCase() === email.toLowerCase()
+    (u) => u.email?.toLowerCase() === email.toLowerCase()
   );
-  return { loginExists, emailExists };
+  return { emailExists };
 }
 
 export async function registerUser(userData) {
-  const { loginExists, emailExists } = await checkDuplicate(userData);
-  if (loginExists) throw new Error("LOGIN_EXISTS");
+  const { emailExists } = await checkDuplicate(userData);
   if (emailExists) throw new Error("EMAIL_EXISTS");
 
   const { data } = await api.post("/users", {
@@ -32,7 +28,7 @@ export async function loginUser({ login, password }) {
   const users = await getUsers();
   const user = users.find(
     (u) =>
-      (u.login.toLowerCase() === login.toLowerCase() ||
+      (u.login?.toLowerCase() === login.toLowerCase() ||
         u.email.toLowerCase() === login.toLowerCase()) &&
       u.password === password
   );
