@@ -12,7 +12,6 @@ export default function RegisterPage({ onSwitch }) {
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
-    login: "",
     email: "",
     phone: "",
     password: "",
@@ -27,8 +26,8 @@ export default function RegisterPage({ onSwitch }) {
 
   async function submit(e) {
     e.preventDefault();
-    const { firstName, lastName, login, email, phone, password } = form;
-    if (!firstName.trim() || !lastName.trim() || !login.trim() || !email.trim() || !phone.trim() || !password.trim()) {
+    const { firstName, lastName, email, phone, password } = form;
+    if (!firstName.trim() || !lastName.trim() || !email.trim() || !phone.trim() || !password.trim()) {
       setError(t.auth.fillAll);
       return;
     }
@@ -38,8 +37,7 @@ export default function RegisterPage({ onSwitch }) {
       await register(form);
       onSwitch();
     } catch (err) {
-      if (err.message === "LOGIN_EXISTS") setError(t.auth.loginExists);
-      else if (err.message === "EMAIL_EXISTS") setError(t.auth.emailExists);
+      if (err.message === "EMAIL_EXISTS") setError(t.auth.emailExists);
       else setError(t.auth.fillAll);
     } finally {
       setLoading(false);
@@ -69,13 +67,6 @@ export default function RegisterPage({ onSwitch }) {
               <input type="text" value={form.lastName} onChange={(e) => update("lastName", e.target.value)} className={inputClass} />
             </FieldWrap>
           </div>
-        </div>
-
-        <div>
-          <label className="block text-xs text-zinc-500 mb-1.5">{t.auth.login}</label>
-          <FieldWrap icon={Mail}>
-            <input type="text" value={form.login} onChange={(e) => update("login", e.target.value)} className={inputClass} />
-          </FieldWrap>
         </div>
 
         <div>
