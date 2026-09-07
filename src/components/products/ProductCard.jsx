@@ -11,10 +11,6 @@ export default function ProductCard({ product, onAddToCart, added }) {
         <img
           src={product.image}
           alt={product.name}
-          onError={(event) => {
-            event.currentTarget.onerror = null;
-            event.currentTarget.src = "/favicon.svg";
-          }}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
       </div>

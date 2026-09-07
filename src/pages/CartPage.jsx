@@ -80,10 +80,6 @@ export default function CartPage({ setActiveNav }) {
             <img
               src={item.product?.image}
               alt={item.product?.name}
-              onError={(event) => {
-                event.currentTarget.onerror = null;
-                event.currentTarget.src = "/favicon.svg";
-              }}
               className="w-16 h-16 rounded-lg object-cover"
             />
             <div className="flex-1 min-w-0">
